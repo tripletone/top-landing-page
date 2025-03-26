@@ -83,7 +83,7 @@ Photo by César O'neill: https://www.pexels.com/photo/teen-boxer-victorious-in-c
 */
 
 .welcome-section {
-    background-image: url('/images/welcome-page-img.jpg');
+    background-image: url('images/welcome-page-img.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ Photo by cottonbro studio: https://www.pexels.com/photo/man-in-black-tank-top-an
 }
 
 .about-container-1 {
-    background-image: url('/images/about-us-boxing.jpg');
+    background-image: url('images/about-us-boxing.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -170,7 +170,7 @@ Photo by cottonbro studio: https://www.pexels.com/photo/man-in-black-tank-top-an
 }
 
 .about-container-2 {
-    background-image: url('/images/training.jpg');
+    background-image: url('images/training.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,7 +213,7 @@ Photo by Coco Championship: https://www.pexels.com/photo/man-standing-inside-box
     justify-content: center;
     gap: 2rem;
     padding: 40px 20px;
-    background-image: url(/images/membership-background.jpg);
+    background-image: url('images/membership-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
