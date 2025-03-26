@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -35,9 +41,10 @@ ul {
 
 .section-header {
     text-align: center;
-    margin-top: 10px;
+    margin: 10px;
     font-size: 3rem;
     font-weight: 900;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* HEADER */
@@ -53,9 +60,13 @@ ul {
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     padding-top: 10px;
     font-size: 1.2rem;
+}
+
+.header h1 {
+    font-family: 'Oswald', sans-serif;
 }
 
 .header ul {
@@ -63,7 +74,13 @@ ul {
     gap: 1rem;
 }
 
-/* WELCOME SECTION */
+.header li:hover {
+    color: #3882F6;
+}
+
+/* WELCOME SECTION 
+Photo by César O'neill: https://www.pexels.com/photo/teen-boxer-victorious-in-colorful-indoor-arena-31303127/
+*/
 
 .welcome-section {
     background-image: url('/images/welcome-page-img.jpg');
@@ -77,7 +94,6 @@ ul {
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 30px;
 }
 
 .welcome-text {
@@ -103,14 +119,22 @@ ul {
 }
 
 .welcome-text button {
-    background-color: #3882F6;
-    display: inline-block;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: 2px solid #3882F6;
+    color: #E5E5E5;
     border: none;
-    padding: 6px 15px;
-    border-radius: 5px;
-    color: #E5E7EB;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: bold;
+}
+
+.welcome-text button:hover {
+    transform: scale(1.05);
+    background-color: #3882F6;
 }
 
 #welcome-page-img {
@@ -118,7 +142,10 @@ ul {
     height: auto;
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION 
+Photo by César O'neill: https://www.pexels.com/photo/intense-boxing-match-in-an-indoor-arena-31303123/
+Photo by cottonbro studio: https://www.pexels.com/photo/man-in-black-tank-top-and-black-pants-4753893/
+*/
 
 .about {
     display: flex;
@@ -140,7 +167,6 @@ ul {
     align-items: center;
     width: 100%;
     text-wrap: wrap;
-    margin-top: 20px;
 }
 
 .about-container-2 {
@@ -176,32 +202,68 @@ ul {
     font-weight: 600;
 }
 
-/* MEMBERSHIPS SECTION */
+/* MEMBERSHIPS SECTION 
+Photo by Coco Championship: https://www.pexels.com/photo/man-standing-inside-boxing-ring-598665/
+*/
+
 
 .memberships {
     display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    height: 50vh;
-    gap: 1rem;
-    padding: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 40px 20px;
+    background-image: url(/images/membership-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .membership {
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    color: #fff;
 }
 
-.membership li {
-    padding: 5px;
+.membership:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-.membership h1,
-.membership h2,
+.membership h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.membership h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #f1f1f1;
+}
+
 .membership h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
     text-align: center;
+    color: #ddd;
+}
+
+.membership-perks {
+    list-style-type: none;
+    padding: 0;
+}
+
+.membership-perks li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bronze h1 {
@@ -217,21 +279,75 @@ ul {
 }
 
 .bronze {
-    border: solid #A0522D 10px;
-    padding: 10px;
+    border: solid #CD7F32 2px;
     background: #703C1D;
 }
 
 .silver {
-    border: solid #C0C0C0 10px;
-    padding: 10px;
+    border: solid #C0C0C0 2px;
     background: #7A7A7A;
 }
 
 .gold {
-    border: solid #FFD700 10px;
-    padding: 10px;
+    border: solid #FFD700 2px;
     background: #B8860B;
 }
 
 /* CONTACT SECTION */
+
+.contact {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #1a1a1a;
+    color: #E5E5E5;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: 2px solid #3882F6;
+    color: #E5E5E5;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    background-color: #3882F6;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
