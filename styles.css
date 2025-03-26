@@ -12,9 +12,10 @@ html {
 body {
     /*font-family: 'Inter', 'Helvetica Neue', sans-serif;*/
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #222;
+    color: #E5E5E5;
     background-color: #fff;
     line-height: 1.25;
+    background: #121212;
 }
 
 a {
@@ -34,8 +35,9 @@ ul {
 
 .section-header {
     text-align: center;
-    padding: 10px;
-    font-size: 2rem;
+    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 /* HEADER */
@@ -53,8 +55,6 @@ ul {
     padding-right: 30px;
     padding-bottom: 30px;
     padding-top: 10px;
-    background: #1F2937;
-    color: #F9FAF8;
     font-size: 1.2rem;
 }
 
@@ -66,7 +66,11 @@ ul {
 /* WELCOME SECTION */
 
 .welcome-section {
-    background: #1F2937;
+    background-image: url('/images/welcome-page-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
     color: #F9FAF8;
     display: flex;
     justify-content: center;
@@ -74,7 +78,6 @@ ul {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
-
 }
 
 .welcome-text {
@@ -83,6 +86,7 @@ ul {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+    width: 50%;
 }
 
 .welcome-text h1 {
@@ -118,29 +122,58 @@ ul {
 
 .about {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 30px;
-    gap: 1rem;
-}
-
-.about img {
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.about-container {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 50%;
 }
 
-.about p {
+.about-container-1 {
+    background-image: url('/images/about-us-boxing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
     text-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-container-2 {
+    background-image: url('/images/training.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    text-wrap: wrap;
+}
+
+.text-content {
+    width: 50%;
+    color: #d6d6d6;
+    text-align: center;
+    padding: 30px;
+}
+
+.text-content h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.text-content p {
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
 /* MEMBERSHIPS SECTION */
@@ -148,12 +181,57 @@ ul {
 .memberships {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: stretch;
+    height: 50vh;
+    gap: 1rem;
+    padding: 30px;
 }
 
 .membership {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
+
+.membership li {
+    padding: 5px;
+}
+
+.membership h1,
+.membership h2,
+.membership h3 {
+    text-align: center;
+}
+
+.bronze h1 {
+    color: #CD7F32;
+}
+
+.silver h1 {
+    color: #c8c9cc;
+}
+
+.gold h1 {
+    color: #FFD700;
+}
+
+.bronze {
+    border: solid #A0522D 10px;
+    padding: 10px;
+    background: #703C1D;
+}
+
+.silver {
+    border: solid #C0C0C0 10px;
+    padding: 10px;
+    background: #7A7A7A;
+}
+
+.gold {
+    border: solid #FFD700 10px;
+    padding: 10px;
+    background: #B8860B;
+}
+
+/* CONTACT SECTION */
